@@ -1,0 +1,16 @@
+<div class="container">
+<h1>Detalles del Usuario</h1>
+<% if @item %>
+<br>
+<div class="mt-4">
+  <p><strong>identification:</strong> <%= @item['identification'] %></p>
+  <p><strong>Name:</strong> <%= @item['name'] %></p>
+  <p><strong>email:</strong> <%= @item['email'] %></p>
+  <p><strong>Mobile:</strong> <%= @item['mobile'] %></p>
+  </div>
+  <%= link_to 'Back to New', new_item_path, class: 'btn btn-secondary' %>
+
+    <% else %>
+      <p>Usuario no encontrado</p>
+    <% end %>
+</div>
